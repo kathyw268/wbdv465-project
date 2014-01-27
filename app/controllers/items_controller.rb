@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-
   # GET /items
   # GET /items.json
   def index
@@ -71,7 +70,5 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, :condition, :description)
     end
-  class SchoolsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
-    end
+
 end
