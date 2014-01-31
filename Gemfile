@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 gem 'devise'
+gem 'devise-encryptable'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'protected_attributes'
@@ -13,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem "haml", "~> 4.0.5"
+gem "haml-rails", :group => :development
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
