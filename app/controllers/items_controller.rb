@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   # GET /items
   # GET /items.json
   def index
@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     respond_to do |format|
-      if @item.save!
+      if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render action: 'show', status: :created, location: @item }
       else
@@ -69,7 +69,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :condition, :description)
+      params[:item]
     end
-
 end

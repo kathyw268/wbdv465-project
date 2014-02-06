@@ -3,10 +3,10 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>User ID</th>
       <th>Name</th>
       <th>Condition</th>
       <th>Description</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -15,6 +15,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
+        <td><%= item.users_id %></td>
         <td><%= item.name %></td>
         <td><%= item.condition %></td>
         <td><%= item.description %></td>
