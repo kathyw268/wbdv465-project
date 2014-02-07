@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-    @item.user = current_user
+    @item.user = current_user # if current_user # uncomment this if only if you intend to let guests create items.
 
     respond_to do |format|
       if @item.save
