@@ -18,7 +18,7 @@
         %td= item.name
         %td= item.condition
         %td= item.description
-        %td= item.users_id
+        %td= item.user.email
         %td=l item.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_item_path(item), :class => 'btn btn-mini'
