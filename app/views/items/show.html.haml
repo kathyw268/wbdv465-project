@@ -17,7 +17,7 @@
 %p
   %strong= model_class.human_attribute_name(:users_id) + ':'
   %br
-  = @item.user.email
+  = @item.user.email if @item.user
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), items_path, :class => 'btn'
