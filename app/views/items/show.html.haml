@@ -1,7 +1,10 @@
 - model_class = Item
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.titleize
-
+%p
+  %strong= model_class.human_attribute_name(:picture) + ':'
+  %br
+  = image_tag @item.picture.url
 %p
   %strong= model_class.human_attribute_name(:name) + ':'
   %br
